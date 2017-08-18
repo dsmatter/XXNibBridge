@@ -70,7 +70,7 @@
     
     // Copy autolayout constrains.
     if (placeholderView.constraints.count > 0) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
             // We only need to copy "self" constraints (like width/height constraints)
             // from placeholder to real view
             for (NSLayoutConstraint *constraint in placeholderView.constraints) {
